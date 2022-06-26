@@ -1,0 +1,50 @@
+{
+    "name": "🆂︎ʜᴇʜᴢʜᴀᴅɪ 🅼︎ᴜsɪᴄ ",
+    "description": "ᴛᴇʟᴇɢʀᴀᴍ Usᴇʀʙᴏᴛ ᴛᴏ ᴘʟᴀʏ sᴏɴɢs ᴀɴᴅ ᴠɪᴅᴇᴏs ɪɴ ᴛᴇʟᴇɢʀᴀᴍ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ ᴅᴇᴠᴇʟᴏᴘᴇᴅ ʙʏ sᴜᴍɪᴛ ʏᴀᴅᴀᴠ.",
+    "logo": "https://telegra.ph/file/e99fd5f4e72127ed67c65.jpg",
+    "keywords": [
+        "Telegram",
+        "MusicPlayer",
+        "VideoPlayer"
+    ],
+    "repository": "https://github.com/Sumit9969/Shezhadi-Music",
+    "env": {
+        "SESSION": {
+            "description": "𝙿𝚢𝚛𝚘𝚐𝚛𝚊𝚖 𝚂𝚝𝚛𝚒𝚗𝚐 𝚂𝚎𝚜𝚜𝚒𝚘𝚗",
+            "required": true
+        },
+        "API_ID": {
+            "description": "𝙴𝚗𝚝𝚎𝚛 𝚈𝚘𝚞𝚛 𝙰𝙿𝙸 𝙸𝙳  𝙵𝚛𝚘𝚖  http://my.telegram.org/apps",
+            "required": true
+        },
+        "HNDLR": {
+            "description": "𝙸𝚝 𝚠𝚒𝚕𝚕 𝚋𝚎 𝚞𝚜𝚎𝚍 𝚊𝚜 𝚙𝚛𝚎𝚏𝚒𝚡 𝚒𝚗 𝚊𝚕𝚕 𝚌𝚘𝚖𝚖𝚊𝚖𝚍𝚜",
+            "required": false,
+            "value": "/"
+        },
+        "API_HASH": {
+            "description": "𝙴𝚗𝚝𝚎𝚛 𝚈𝚘𝚞𝚛 𝙷𝙰𝚂𝙷 𝙸𝙳  𝙵𝚛𝚘𝚖  http://my.telegram.org/apps",
+            "required": true
+        },
+        "SUDO_USERS": {
+            "description": "𝙻𝚒𝚜𝚝 𝚘𝚏 𝚞𝚜𝚎𝚛𝚜 𝙸𝙳 𝚞𝚜𝚎𝚛𝚜 𝚌𝚘𝚞𝚗𝚝 𝚊𝚜 𝚊𝚍𝚖𝚒𝚗 𝚎𝚟𝚎𝚛𝚢𝚠𝚑𝚎𝚛𝚎 (𝚜𝚎𝚙𝚊𝚛𝚊𝚝𝚎 𝚞𝚜𝚒𝚗𝚐 𝚜𝚙𝚊𝚌𝚎)",
+            "required": true
+        }
+    },
+    "addons": [],
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        },
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    },
+    "stack": "container"
+}
